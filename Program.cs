@@ -68,15 +68,15 @@ namespace MasterMind
         }
 
         private static List<int> GetAttemptCode() {
-            List<int> result = new List<int>();
+            List<int> attemptCode = new List<int>();
 
             for(int i = 0; i < NUM_OF_DIGITS; i++)
             {
                 Console.WriteLine("Enter digit #" + (i + 1) + ":");
                 int digit = GetDigit();
-                result.Add(digit);
+                attemptCode.Add(digit);
             }
-            return result;
+            return attemptCode;
         }
 
         private static int GetDigit()
@@ -111,17 +111,17 @@ namespace MasterMind
 
         private static string ConstructPlusMinusString(int reds, int whites)
         {
-            string result = "";
+            string constructedString = "";
 
             for (int r = 0; r < reds; r++)
             {
-                result = result + RED_PEG_SYMBOL;
+                constructedString = constructedString + RED_PEG_SYMBOL;
             }
             for (int w = 0; w < whites; w++)
             {
-                result = result + WHITE_PEG_SYMBOL;
+                constructedString = constructedString + WHITE_PEG_SYMBOL;
             }
-            return result;
+            return constructedString;
         }
     }
 }

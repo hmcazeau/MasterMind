@@ -21,16 +21,16 @@ namespace MasterMind
         }
         public List<int> GenerateCode()
         {
-            List<int> result = new List<int>();
+            List<int> generatedCode = new List<int>();
 
             for(int i = 0; i < numOfDigits; i++)
             {
                 int randomNum = GenerateDigit(minDigit, maxDigit);
-                result.Add(randomNum);
+                generatedCode.Add(randomNum);
 
             }
 
-            return result;
+            return generatedCode;
         }
 
         private int GenerateDigit(int min, int max)
